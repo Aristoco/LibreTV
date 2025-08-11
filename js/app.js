@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // 标记已初始化默认值
         localStorage.setItem('hasInitializedDefaults', 'true');
     }
-
+    selectedAPIs = Object.keys(window.API_SITES);
+    localStorage.setItem('selectedAPIs', JSON.stringify(selectedAPIs));
     // 设置黄色内容过滤器开关初始状态
     const yellowFilterToggle = document.getElementById('yellowFilterToggle');
     if (yellowFilterToggle) {
